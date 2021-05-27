@@ -19,7 +19,7 @@
 ## restaurantsテーブル
 |      Column       |Type       |          Options          |
 |restaurant         |string     | null: false               |
-|time_zone_id       |integer    |null: false ,unique: true  |
+|time_zone_id       |integer    |null: false                |
 |category_id        |integer    |null: false                |
 |close_time_id      |integer    |null: false                |
 |memo               |text       |                           |
