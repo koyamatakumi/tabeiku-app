@@ -26,12 +26,12 @@
 
         <div class="field">
          <%= f.label :occupation, "年齢" %><br />
-         <%# <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box", id:"age"}) %> %>
+         <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box", id:"age"}) %>
         </div>
 
         <div class="field">
          <%= f.label :occupation, "性別" %><br />
-         <%# <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"age"}) %> %>
+         <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"age"}) %>
         </div>
 
         <div class="field">
