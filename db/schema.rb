@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_05_27_111218) do
 
   create_table "restaurants", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "estaurant", default: "", null: false
+    t.string "restaurant", default: "", null: false
     t.integer "time_zone_id", null: false
     t.integer "category_id", null: false
     t.integer "close_time_id", null: false
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_05_27_111218) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "nickname", default: ""
+    t.string "nickname", default: "", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.integer "age_id", null: false

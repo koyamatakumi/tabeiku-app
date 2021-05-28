@@ -20,7 +20,7 @@
         </div>
 
         <div class="field">
-         <%= f.label :close_time, "年齢" %><br />
+         <%= f.label :close_time, "閉店時間" %><br />
          <%= f.collection_select(:close_time_id, CloseTime.all, :id, :name, {}, {class:"select-box", id:"close_time"}) %>
         </div>
 

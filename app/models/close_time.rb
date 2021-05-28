@@ -14,7 +14,7 @@ class CloseTime < ActiveHash::Base
     { id: 12, name: '20:30' },
     { id: 13, name: '21:00' },
     { id: 14, name: '21:30' },
-    { id: 12, name: '22:00' },
-    { id: 13, name: '22:00以降' }
+    { id: 15, name: '22:00' },
+    { id: 16, name: '22:00以降' }
   ]
   end
