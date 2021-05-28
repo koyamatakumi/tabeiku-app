@@ -16,4 +16,5 @@ class User < ApplicationRecord
    belongs_to_active_hash :age
    belongs_to_active_hash :gender
 
+   has_many :restaurants
 end
