@@ -19,7 +19,15 @@ li{
 }
 .logo {
   padding: 5px 0 50px 20px;
-  font-size: 30px;
+  font-size: 35px;
+  text-decoration: none;
+  color: #000;
+  font-family:serif
+}
+.user-nickname{
+  text-decoration: none;
+  color: #000;
+  font-family:serif
 }
 
 .nav__btn{
@@ -33,6 +41,7 @@ li{
   border: 1px #101010 solid;
   border-radius: 3px;
   transition: 0.4s ease;
+  font-family:serif
 }
 
 .omise__btn{
@@ -46,4 +55,5 @@ li{
   border: 1px #101010 solid;
   border-radius: 3px;
   transition: 0.4s ease;
+  font-family:serif
 }

@@ -12,8 +12,8 @@
       <div class="inner">
         <div class="nav">
           <div class="nav__left">
-            <%# <%= link_to image_tag("logo.png", class: :logo), root_path %> 
-          <div class="logo">TABEIKU</div>
+            <%= link_to "TABEIKU",root_path,class: "logo"  %> 
+          <%# <div class="logo">TABEIKU</div> %>
           </div>
           <% if user_signed_in? %>
             <div class="nav__right">
