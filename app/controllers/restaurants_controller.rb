@@ -1,6 +1,8 @@
 class RestaurantsController < ApplicationController
   
   def index
+    # binding.pry
+     @restaurants = Restaurant.includes(:user).order("created_at DESC")
   end
 
   def new
