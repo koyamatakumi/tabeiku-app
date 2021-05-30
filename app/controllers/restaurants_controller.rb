@@ -22,7 +22,7 @@ class RestaurantsController < ApplicationController
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:restaurant,:time_zone_id,:category_id,:close_time_id,:memo,).merge(user_id: current_user.id)
+    params.require(:restaurant).permit(:restaurant,:time_zone_id,:category_id,:close_time_id,:gaibu_net,:memo,).merge(user_id: current_user.id)
   end
 
 end
