@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
     if@comment.save
       redirect_to restaurant_path(@restaurant.id)
     else 
+    @comments = @restaurant.comments
       render "restaurants/show"
     end 
 

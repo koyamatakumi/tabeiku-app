@@ -22,6 +22,7 @@ class RestaurantsController < ApplicationController
 
   def show
     @comment = Comment.new
+    @comments = @restaurant.comments.order("created_at DESC")
   end
 
   def edit
