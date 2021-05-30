@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2021_05_27_111218) do
     t.integer "time_zone_id", null: false
     t.integer "category_id", null: false
     t.integer "close_time_id", null: false
+    t.text "gaibu_net"
     t.text "memo"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
