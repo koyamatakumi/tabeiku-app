@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  before_action :restaurant_set, only: [:edit, :update,:destroy]
+  before_action :restaurant_set, only: [:show, :edit, :update, :destroy]
 
   def index
     # binding.pry
@@ -18,6 +18,10 @@ class RestaurantsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    
   end
 
   def edit

@@ -1,33 +1,20 @@
 
 <div class="restaurant__block">
-<%# <% binding.pry %>
-  <%# <%= link_to image_tag(prototype.image, class: :card__img ), prototype_path(prototype)%> 
   <div class="restaurant__summary__block">
-  <p class="restaurant__summary">
-      店名 :  <%= restaurant.restaurant %>
-    </p>
     <p class="restaurant__summary">
-      詳細リンク :  <%= link_to 'こちらをクリック', restaurant.gaibu_net ,target: :_blank%>
+      店名 :  <%= link_to " #{restaurant.restaurant}", restaurant_path(restaurant.id), class: :card__user %></p>
+    <p class="restaurant__summary">詳細リンク :   <%= link_to 'こちらをクリック', restaurant.gaibu_net ,target: :_blank%></p>
+    <p class="restaurant__summary">時間帯 :      <%= restaurant.time_zone.name %></p>
+    <p class="restaurant__summary">ジャンル :    <%= restaurant.category.name %></p>
+    <p class="restaurant__summary">閉店時間 :    <%= restaurant.close_time.name %></p>
+    <p class="restaurant__summary">メモ :       <%=restaurant.memo %></p>
+  <% if current_user == restaurant.user%>
     <p class="restaurant__summary">
-      時間帯 :  <%= restaurant.time_zone.name %>
+      <div><%= link_to "お店の情報を編集", edit_restaurant_path(restaurant.id), class: :card__user %></div>
+      <div><%= link_to "お店の情報を削除", restaurant_path(restaurant.id), method: :delete, class: :card__user %></div>
     </p>
-    <p class="restaurant__summary">
-      ジャンル :  <%= restaurant.category.name %>
-    </p>
-    <p class="restaurant__summary">
-      閉店時間 :  <%= restaurant.close_time.name %>
-    </p>
-    <p class="restaurant__summary">
-      メモ :  <%=restaurant.memo %>
-    </p>
-    <p class="restaurant__summary">
-    <%= link_to " #{restaurant.user.nickname}", root_path, class: :card__user %>さんが発見
-    </p>
-    <% if current_user == restaurant.user%>
-    <p class="restaurant__summary">
-    <div><%= link_to "お店の情報を編集", edit_restaurant_path(restaurant.id), class: :card__user %></div>
-    <div><%= link_to "お店の情報を削除", restaurant_path(restaurant.id), method: :delete, class: :card__user %></div>
-    </p>
-    <%end%>
+  <%else%>
+    <div><%= link_to " #{restaurant.user.nickname}", root_path, class: :card__user %>さんが発見</div>
+  <%end%>
   </div>
 </div>
