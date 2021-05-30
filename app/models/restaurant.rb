@@ -2,6 +2,7 @@ class Restaurant < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
 
    belongs_to :user
+   has_many   :comments
 
     # 選択関係で「---」のままになっていないか検証
     with_options numericality: { other_than: 0, message: 'Select' } do
