@@ -1,5 +1,6 @@
 class RestaurantsController < ApplicationController
-  
+  before_action :restaurant_set, only: [:edit, :update]
+
   def index
     # binding.pry
      @restaurants = Restaurant.includes(:user).order("created_at DESC")
@@ -19,10 +20,24 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  def edit
+    return redirect_to root_path if current_user.id != @restaurant.user.id
+  end
+  
+  def update
+    @restaurant.update(restaurant_params) if current_user.id == @restaurant.user.id
+    return redirect_to root_path if @restaurant.valid?
+    render 'edit'
+  end
+
   private
 
   def restaurant_params
     params.require(:restaurant).permit(:restaurant,:time_zone_id,:category_id,:close_time_id,:gaibu_net,:memo,).merge(user_id: current_user.id)
+  end
+
+  def restaurant_set
+    @restaurant = Restaurant.find(params[:id])
   end
 
 end

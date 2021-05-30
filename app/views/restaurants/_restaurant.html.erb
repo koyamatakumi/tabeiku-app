@@ -20,6 +20,13 @@
     <p class="restaurant__summary">
       メモ :  <%=restaurant.memo %>
     </p>
+    <p class="restaurant__summary">
     <%= link_to " #{restaurant.user.nickname}", root_path, class: :card__user %>さんが発見
+    </p>
+    <% if current_user == restaurant.user%>
+    <p class="restaurant__summary">
+    <%= link_to "お店の情報を編集", edit_restaurant_path(restaurant.id), class: :card__user %>
+    </p>
+    <%end%>
   </div>
 </div>
