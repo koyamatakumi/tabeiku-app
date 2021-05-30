@@ -1,4 +1,6 @@
-
+html, body {
+  font-family: 'Amatic SC', cursive;
+}
 
 .nav__left {
   width: 100%;
@@ -24,13 +26,13 @@ li{
   font-size: 35px;
   text-decoration: none;
   color: #000;
-  font-family:serif
+  /* font-family:serif */
 }
 .user-nickname{
   margin: 0 0 0 10px ;
   text-decoration: none;
   color: #000;
-  font-family:serif
+  /* font-family:serif */
 }
 
 .nav__btn{
@@ -44,7 +46,7 @@ li{
   border: 1px #101010 solid;
   border-radius: 3px;
   transition: 0.4s ease;
-  font-family:serif
+  /* font-family:serif */
 }
 
 .omise__btn{
@@ -58,7 +60,7 @@ li{
   border: 1px #101010 solid;
   border-radius: 3px;
   transition: 0.4s ease;
-  font-family:serif
+  /* font-family:serif */
 }
 
 .restaurant__block{
