@@ -25,7 +25,8 @@
     </p>
     <% if current_user == restaurant.user%>
     <p class="restaurant__summary">
-    <%= link_to "お店の情報を編集", edit_restaurant_path(restaurant.id), class: :card__user %>
+    <div><%= link_to "お店の情報を編集", edit_restaurant_path(restaurant.id), class: :card__user %></div>
+    <div><%= link_to "お店の情報を削除", restaurant_path(restaurant.id), method: :delete, class: :card__user %></div>
     </p>
     <%end%>
   </div>

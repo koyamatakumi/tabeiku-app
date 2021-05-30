@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  before_action :restaurant_set, only: [:edit, :update]
+  before_action :restaurant_set, only: [:edit, :update,:destroy]
 
   def index
     # binding.pry
@@ -28,6 +28,14 @@ class RestaurantsController < ApplicationController
     @restaurant.update(restaurant_params) if current_user.id == @restaurant.user.id
     return redirect_to root_path if @restaurant.valid?
     render 'edit'
+  end
+
+  def destroy
+    if @restaurant.destroy
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
   end
 
   private
