@@ -60,3 +60,15 @@ li{
   transition: 0.4s ease;
   font-family:serif
 }
+
+.restaurant__block{
+  border-bottom: 1px solid red;
+  margin-top: 0px;       /* 上線の外側の余白はナシ */
+  padding-top: 0px;      /* 上線の内側の余白はナシ */
+  margin-bottom: 0.3em;  /* 下線の外側の余白量 */
+  padding-bottom: 0.3em; /* 下線の内側の余白量 */
+}
+
+.restaurant__summary{
+  margin-bottom: 8px;
+}
