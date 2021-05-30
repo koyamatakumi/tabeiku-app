@@ -3,9 +3,11 @@
 <%# <% binding.pry %>
   <%# <%= link_to image_tag(prototype.image, class: :card__img ), prototype_path(prototype)%> 
   <div class="restaurant__summary__block">
-    <p class="restaurant__summary">
-      お店の名前 :  <%= link_to restaurant.restaurant, root_path, class: :card__title%>
+  <p class="restaurant__summary">
+      店名 :  <%= restaurant.restaurant %>
     </p>
+    <p class="restaurant__summary">
+      詳細リンク :  <%= link_to 'こちらをクリック', restaurant.gaibu_net ,target: :_blank%>
     <p class="restaurant__summary">
       時間帯 :  <%= restaurant.time_zone.name %>
     </p>
