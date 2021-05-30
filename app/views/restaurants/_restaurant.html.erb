@@ -1,0 +1,23 @@
+
+<div class="restaurant__block">
+<%# <% binding.pry %>
+  <%# <%= link_to image_tag(prototype.image, class: :card__img ), prototype_path(prototype)%> 
+  <div class="restaurant__summary__block">
+    <p class="restaurant__summary">
+      お店の名前 :  <%= link_to restaurant.restaurant, root_path, class: :card__title%>
+    </p>
+    <p class="restaurant__summary">
+      時間帯 :  <%= restaurant.time_zone.name %>
+    </p>
+    <p class="restaurant__summary">
+      ジャンル :  <%= restaurant.category.name %>
+    </p>
+    <p class="restaurant__summary">
+      閉店時間 :  <%= restaurant.close_time.name %>
+    </p>
+    <p class="restaurant__summary">
+      メモ :  <%=restaurant.memo %>
+    </p>
+    <%= link_to " #{restaurant.user.nickname}", root_path, class: :card__user %>さんが発見
+  </div>
+</div>

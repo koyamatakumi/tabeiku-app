@@ -8,7 +8,28 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+<header class="header">
+      <div class="inner">
+        <div class="nav">
+          <div class="nav__left">
+            <%= link_to "TABEIKU",root_path,class: "logo"  %> 
+          <%# <div class="logo">TABEIKU</div> %>
+          </div>
+          <% if user_signed_in? %>
+            <div class="nav__right">
+              <li><%= link_to "#{current_user.nickname}", "#", class: "user-nickname" %>  さん   ログイン中</li>
+              <li><%= link_to '行ってみたいお店発見！', new_restaurant_path, class: "omise__btn" %></li>
+              <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav__btn" %></li>
+            </div>
+          <% else %>
+            <div class="nav__right">
+              <li><%= link_to 'ログイン', new_user_session_path, class: "nav__btn" %></li>
+              <li><%= link_to '新規登録', new_user_registration_path, class: "nav__btn" %></li>
+            </div>
+          <% end %>
+        </div>
+      </div>
+  </header>
   <body>
     <%= yield %>
   </body>

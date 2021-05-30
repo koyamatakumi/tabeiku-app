@@ -1,0 +1,74 @@
+
+
+.nav__left {
+  width: 100%;
+  height:10vh;
+  display: flex;
+  /* justify-content: space-between; */
+  background-color: brown;
+}
+
+.nav__right{
+  display: flex;
+  /* justify-content: space-between; */
+  background-color: brown;
+}
+
+li{
+  margin: 0 15px;
+  font-size: large;
+  list-style: none;
+}
+.logo {
+  padding: 5px 0 50px 20px;
+  font-size: 35px;
+  text-decoration: none;
+  color: #000;
+  font-family:serif
+}
+.user-nickname{
+  margin: 0 0 0 10px ;
+  text-decoration: none;
+  color: #000;
+  font-family:serif
+}
+
+.nav__btn{
+  display: inline-block;
+  padding: 0.6em 1.6em;
+  margin: 0.6em 0.4em;
+  font-size: 0.5em;
+  color: orange;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #101010 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  font-family:serif
+}
+
+.omise__btn{
+  display: inline-block;
+  padding: 0.6em 1.6em;
+  margin: 0.6em 0.4em;
+  font-size: 0.5em;
+  color: orange;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #101010 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  font-family:serif
+}
+
+.restaurant__block{
+  border-bottom: 1px solid red;
+  margin-top: 0px;       /* 上線の外側の余白はナシ */
+  padding-top: 0px;      /* 上線の内側の余白はナシ */
+  margin-bottom: 0.3em;  /* 下線の外側の余白量 */
+  padding-bottom: 0.3em; /* 下線の内側の余白量 */
+}
+
+.restaurant__summary{
+  margin-bottom: 8px;
+}

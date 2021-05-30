@@ -1,9 +1,7 @@
-<h1>TABEIKU</h1>
-    <% if user_signed_in? %>
-      <li><%= link_to "#{current_user.nickname}", "#", class: "user-nickname" %>  さん   ログイン中</li>
-      <li><%= link_to '行ってみたいお店発見！', new_restaurant_path, class: "logout" %></li>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-      <% else %>
-      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-    <% end %>
+<%= form_with(url: root_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+  <%= form.submit "検索", class: "search-btn" %>
+<% end %>
+<div class="contents row">
+  <%= render partial: 'restaurant', collection: @restaurants %>
+</div>
