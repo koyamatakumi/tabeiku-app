@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_27_111218) do
+ActiveRecord::Schema.define(version: 2021_05_30_074818) do
+
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "comment", null: false
+    t.bigint "user_id"
+    t.bigint "restaurant_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["restaurant_id"], name: "index_comments_on_restaurant_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
 
   create_table "restaurants", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "restaurant", default: "", null: false
@@ -42,5 +52,7 @@ ActiveRecord::Schema.define(version: 2021_05_27_111218) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "restaurants"
+  add_foreign_key "comments", "users"
   add_foreign_key "restaurants", "users"
 end

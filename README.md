@@ -38,7 +38,7 @@
 
 ### Association
 - belongs_to :user
-- belongs_to :comment
+- belongs_to :restaurant
 
 ### donesテーブル
 |      Column       |Type       |          Options          |
