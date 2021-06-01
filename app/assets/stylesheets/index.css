@@ -1,5 +1,12 @@
-html, body {
-  font-family: 'Amatic SC', cursive;
+/* @font-face{
+  font-family: 'Comic Sans MS';
+  src: local('Comic Sans MS');
+  unicode-range: U+0000-00FF;
+} */
+
+body {
+  /* font-family: 'Comic Sans MS', cursive; */
+  font-family: 'arial unicode ms'
 }
 
 .nav__left {
@@ -7,13 +14,13 @@ html, body {
   height:10vh;
   display: flex;
   /* justify-content: space-between; */
-  background-color: brown;
+  background-color: #66CCCC;
 }
 
 .nav__right{
   display: flex;
   /* justify-content: space-between; */
-  background-color: brown;
+  background-color: #66CCCC;
 }
 
 li{
@@ -40,7 +47,7 @@ li{
   padding: 0.6em 1.6em;
   margin: 0.6em 0.4em;
   font-size: 0.5em;
-  color: orange;
+  color: rgb(215, 224, 223);
   text-decoration: none;
   user-select: none;
   border: 1px #101010 solid;
@@ -54,7 +61,7 @@ li{
   padding: 0.6em 1.6em;
   margin: 0.6em 0.4em;
   font-size: 0.5em;
-  color: orange;
+  color: rgb(215, 224, 223);
   text-decoration: none;
   user-select: none;
   border: 1px #101010 solid;
@@ -64,7 +71,7 @@ li{
 }
 
 .restaurant__block{
-  border-bottom: 1px solid red;
+  border-bottom: 2px solid  #66CCCC;
   margin-top: 0px;       /* 上線の外側の余白はナシ */
   padding-top: 0px;      /* 上線の内側の余白はナシ */
   margin-bottom: 0.3em;  /* 下線の外側の余白量 */

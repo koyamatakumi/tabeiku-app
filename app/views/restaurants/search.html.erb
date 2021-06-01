@@ -1,0 +1,8 @@
+<h1>検索結果を表示しています。</h1>
+<p><%= link_to "トップページに戻る", root_path, class: "restaurant__top" %></p>
+<p class=margin__tag></p>
+<div class="contents row">
+  <% @restaurants.each do |restaurant| %>
+    <%= render partial: "restaurant", locals: { restaurant: restaurant } %>
+  <% end %>
+</div>
