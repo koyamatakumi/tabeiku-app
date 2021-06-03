@@ -14,7 +14,7 @@
       <div><%= link_to "お店の情報を削除", restaurant_path(restaurant.id), method: :delete, class: :card__user %></div>
     </p>
   <%else%>
-    <div><%= link_to " #{restaurant.user.nickname}", root_path, class: :card__user %>さんが発見</div>
+    <div><%= link_to " #{restaurant.user.nickname}", user_path(restaurant.user.id), class: :card__user %>さんが発見</div>
   <%end%>
   </div>
 </div>
