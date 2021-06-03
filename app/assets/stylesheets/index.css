@@ -100,3 +100,7 @@ li{
 .restaurant__summary{
   margin-bottom: 8px;
 }
+
+.logo__tag{
+  height: 70px;
+}
