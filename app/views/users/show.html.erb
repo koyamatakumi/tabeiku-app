@@ -22,6 +22,10 @@
             <th class="table__col1">プロフィール</th>
             <td class="table__col2"><%= @user.profile %></td>
           </tr>
+          <tr>
+            <th class="table__col1">投稿したお店の数</th>
+            <td class="table__col2"><%= @restaurants.length%></td>
+          </tr>
         </tbody>
       </table>
       <div>
