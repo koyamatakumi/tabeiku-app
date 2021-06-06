@@ -3,6 +3,9 @@
     <div class="user__wrapper">
       <h2 class="page-heading">
         <%= "#{@user.nickname}さんの情報"%>
+                <%if current_user.id == @user.id%>
+        <%= link_to "情報を編集", edit_user_path(current_user.id), class: "restaurant__top" %>
+        <% end %>
       </h2>
       <table class="table">
         <tbody>
