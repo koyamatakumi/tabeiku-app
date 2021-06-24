@@ -8,6 +8,8 @@
     <p class="restaurant__summary">ジャンル :    <%= restaurant.category.name %></p>
     <p class="restaurant__summary">閉店時間 :    <%= restaurant.close_time.name %></p>
     <p class="restaurant__summary">メモ :       <%=restaurant.memo %></p>
+    <div class="line-it-button" data-lang="ja" data-type="share-a" data-ver="3" data-url="https://tabeiku-app.herokuapp.com/" data-color="default" data-size="large" data-count="false" style="display: none;"></div>
+    <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
   <% if current_user == restaurant.user%>
     <p class="restaurant__summary">
       <div><%= link_to "お店の情報を編集", edit_restaurant_path(restaurant.id), class: :card__user %></div>
